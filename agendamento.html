@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Agendamento</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento de Serviço</h1>
+        <form action="https://api.sheetmonkey.io/form/ekkD2yR2QCcDofDM8N5XAK" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="Nome" required>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="Data" required>
+
+            <input type="hidden" name="DataHora" value="x-sheetmonkey-current-date-time">
+
+            <label for="service">Tipo de Serviço:</label>
+            <div class="checkbox-group" id="service">
+                <label><input type="checkbox" name="Tipo de Serviço" value="Manicure"> Manicure</label>
+                <label><input type="checkbox" name="Tipo de Serviço" value="Sobrancelha"> Sobrancelha</label>
+            </div>
+
+            <label for="phone">Telefone para Contato:</label>
+            <input type="tel" id="phone" name="Telefone para Contato" placeholder="(xx) xxxxx-xxxx" required>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
