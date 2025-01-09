@@ -1,0 +1,158 @@
+/* Estilos globais */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #F5F5DC;
+}
+
+.cardLinkTree {
+    width: 90%; /* Para dispositivos menores, ocupa quase toda a largura */
+    max-width: 400px; /* Limita a largura máxima em telas grandes */
+    background-color: #D8CAB8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Alinhamento da imagem e texto */
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que o texto desça para a linha de baixo em telas menores */
+}
+
+.circular {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.imageContainer p {
+    font-size: 14px;
+    text-align: left;
+    margin: 0;
+}
+
+/* Botões */
+.buttonLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    background: #8A9A5B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background: #6B7B4C;
+    color: #ecebeb;
+}
+
+.p1 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+/* Aplica-se a dispositivos móveis e tablets. Usado para telas pequenas */
+    .cardLinkTree {
+        width: 80%;        
+        padding: 15px;
+    }
+    .imageContainer {
+        display: flex;       
+        align-items: center; 
+        justify-content: center;
+        text-align: center; 
+    }
+    .circular {
+        width: 40px;        
+        height: 40px;       
+        margin-right: 10px; 
+    }
+    .imageContainer p {
+        font-size: 12px;    
+        margin: 0;
+    }
+    .button {
+        font-size: 14px;     
+        padding: 8px 16px;
+    }
+    .p1 {
+        font-size: 12px;   
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 769px) {
+/*Aplica-se a desktops e dispositivos maiores. Usado para telas grandes.*/
+    .cardLinkTree {
+        padding: 20px;
+    }
+    .imageContainer {
+        flex-direction: row;
+    }
+    .circular {
+        margin-right: 10px;
+    }
+}
+#calendar-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#calendar {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+#calendar-body div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#calendar-body div:hover {
+    background-color: #f0f0f0;
+}
+
+#prev-month, #next-month {
+    cursor: pointer;
+}
